@@ -3,10 +3,13 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        dartls = {},
-      },
-      settings = {
-        lineLength = 120,
+        dartls = {
+          settings = {
+            dart = {
+              lineLength = 120,
+            },
+          },
+        },
       },
     },
   },
