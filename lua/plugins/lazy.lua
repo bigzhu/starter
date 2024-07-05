@@ -1,3 +1,4 @@
+-- lazy 的配置, 可以参看  example.lua
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
