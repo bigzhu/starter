@@ -5,7 +5,7 @@ return {
     ensure_installed = {
       "hyprlang",
       "tmux",
-      "dart",
+      -- "dart",
       "bash",
       "html",
       "javascript",
