@@ -108,3 +108,6 @@ doctest
 codegen
 nhost
 inapp
+pyright
+poetry
+poetry
