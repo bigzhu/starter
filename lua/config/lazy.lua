@@ -41,6 +41,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.kotlin" },
     { import = "lazyvim.plugins.extras.lang.sql" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "lazyvim.plugins.extras.lang.go" },
     { import = "plugins" },
   },
   defaults = {

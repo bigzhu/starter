@@ -4,6 +4,7 @@ return {
     config = function()
       require("code_runner").setup({
         filetype = {
+          dart = "flutter test",
           python = "poetry run python",
           markdown = 'open "obsidian://open?file=$fileNameWithoutExt"',
         },
