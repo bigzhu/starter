@@ -143,3 +143,5 @@ SelfHost
 S3
 ECS
 EC2
+MySQL
+Kubernetes
