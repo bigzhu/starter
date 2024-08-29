@@ -1,3 +1,12 @@
+-- Define color palette
+local c = {
+  ui = {
+    title = "#282828", -- Light color for titles
+    base = "#282828", -- Dark background color
+    green = "#b8bb26", -- Green color
+    yellow = "#fabd2f", -- Yellow color
+  },
+}
 return {
 
   {
@@ -24,11 +33,24 @@ return {
           insert = "<CR>",
         },
       },
-      highlights = {
-        diff = {
-          current = "DiffText",
-          incoming = "DiffAdd",
+
+      colorscheme = "gruvbox",
+      gruvbox = {
+        contrast = "hard",
+        palette_overrides = {
+          bright_green = "#b8bb26",
+          bright_yellow = "#fabd2f",
         },
+      },
+      highlights = {
+        -- AvanteTitle = { fg = c.ui.title, bg = c.ui.base },
+        -- AvanteReversedTitle = { fg = c.ui.base },
+        -- AvanteSubtitle = { fg = c.ui.green, bg = c.ui.base },
+        -- AvanteReversedSubtitle = { fg = c.ui.base },
+        -- AvanteThirdTitle = { fg = c.ui.yellow, bg = c.ui.base },
+        -- AvanteReversedThirdTitle = { fg = c.ui.base },
+        -- AvanteConflictCurrent = "DiffText",
+        -- AvanteConflictIncoming = "DiffAdd",
       },
     },
     dependencies = {
