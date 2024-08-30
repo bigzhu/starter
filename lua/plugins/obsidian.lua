@@ -1,5 +1,6 @@
 return {
-  "epwalsh/obsidian.nvim",
+  -- "epwalsh/obsidian.nvim",
+  dir = "~//Sync/Projects/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   -- dir = "~/obsidian.nvim",
   lazy = false,
@@ -24,7 +25,7 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
-    log_level = vim.log.levels.ERROR,
+    -- log_level = vim.log.levels.ERROR,
     dir = "~/Sync/home/cheese", -- no need to call 'vim.fn.expand' here
     sort_by = "modified",
     sort_reversed = true,
