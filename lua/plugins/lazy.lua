@@ -1,5 +1,7 @@
 -- lazy 的配置, 可以参看  example.lua
 return {
+
+  { "arturgoms/moonbow.nvim" },
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
@@ -22,6 +24,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "gruvbox-flat",
+      -- colorscheme = "moonbow",
     },
   },
 }
