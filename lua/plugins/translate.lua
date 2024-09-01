@@ -4,7 +4,8 @@ return {
     lazy = true,
     config = true,
     keys = {
-      { "tt", "viw<CMD>Translate ZH<CR>", desc = "Translate to Chinese", mode = { "n" } },
+      { "tw", "viw<CMD>Translate ZH<CR>", desc = "Translate word to Chinese", mode = { "n" } },
+      { "ts", "<CMD>Translate ZH<CR>", desc = "Translate sentence to Chinese", mode = { "n" } },
     },
   },
 }
