@@ -2,6 +2,7 @@
 return {
 
   { "arturgoms/moonbow.nvim" },
+  { "rebelot/kanagawa.nvim" },
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
@@ -23,18 +24,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-flat",
+      colorscheme = "kanagawa",
       -- colorscheme = "moonbow",
-    },
-  },
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        harper_ls = {},
-      },
     },
   },
 }
