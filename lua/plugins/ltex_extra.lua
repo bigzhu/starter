@@ -3,7 +3,7 @@
 -- https://medium.com/@Erik_Krieg/free-and-open-source-grammar-correction-in-neovim-using-ltex-and-n-grams-dea9d10bc964
 return {
   "barreiroleo/ltex_extra.nvim",
-  ft = { "markdown", "tex", "dart", "go" },
+  -- ft = { "markdown", "tex", "dart", "go", "lua" },
   dependencies = { "neovim/nvim-lspconfig" },
 
   config = function()
@@ -17,13 +17,12 @@ return {
         settings = {
           ltex = {
             -- motherTounge = "en",
-            filetypes = { "markdown", "tex", "dart", "go" },
+            filetypes = { "markdown", "tex", "dart", "go", "lua" },
             language = "en",
-            -- additionalRules = {
-            --   enablePickyRules = true,
-            --   languageModel = "/Users/bigzhu/Sync/config/nvim/models/",
-            --   checkFrequency = "save",
-            -- },
+            additionalRules = {
+              enablePickyRules = true,
+              languageModel = "~/Sync/config/nvim/models/",
+            },
           },
         },
       },
