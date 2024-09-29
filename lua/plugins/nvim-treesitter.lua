@@ -3,6 +3,7 @@ return {
   -- commit = "f2778bd1a28b74adf5b1aa51aa57da85adfa3d16",
   opts = {
     ensure_installed = {
+      "graphql",
       "ini",
       "hyprlang",
       "tmux",

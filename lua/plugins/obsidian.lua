@@ -1,5 +1,5 @@
 return {
-  dir = "~//Sync/Projects/obsidian.nvim",
+  dir = "~/Sync/Projects/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = false,
   ft = "markdown",
