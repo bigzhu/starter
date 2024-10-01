@@ -17,6 +17,7 @@ local opts = {
     },
   }, -- add any opts here
 }
+
 return {
   {
     "yetone/avante.nvim",
@@ -28,6 +29,7 @@ return {
     build = "make",
     -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
     dependencies = {
+      "nvim-treesitter/nvim-treesitter",
       "stevearc/dressing.nvim",
       "nvim-lua/plenary.nvim",
       "MunifTanjim/nui.nvim",
