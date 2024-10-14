@@ -21,8 +21,8 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
-    { import = "lazyvim.plugins.extras.coding.codeium" },
-    { import = "lazyvim.plugins.extras.coding.mini-surround" },
+    -- { import = "lazyvim.plugins.extras.coding.codeium" },
+    -- { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
     { import = "lazyvim.plugins.extras.editor.aerial" }, -- <leader> c(code) s(symbols) to open aerial
 
