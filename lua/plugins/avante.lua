@@ -12,8 +12,8 @@ local opts = {
       prev = "[[",
     },
     submit = {
-      normal = "<CR>", -- If you want break line, using SHIFT+ENTER
-      insert = "<CR>",
+      -- normal = "<CR>", -- If you want break line, using SHIFT+ENTER
+      -- insert = "<CR>",
     },
   }, -- add any opts here
 }
