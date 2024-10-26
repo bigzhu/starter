@@ -1,3 +1,9 @@
+-- 在文件开头添加检查
+if vim.g.vscode then
+  -- VSCode extension mode
+  return
+end
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
