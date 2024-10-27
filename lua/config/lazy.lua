@@ -1,9 +1,3 @@
--- 在文件开头添加检查
-if vim.g.vscode then
-  -- VSCode extension mode
-  return
-end
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -23,30 +17,111 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
     -- { import = "lazyvim.plugins.extras.coding.codeium" },
     -- { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
-    { import = "lazyvim.plugins.extras.editor.aerial" }, -- <leader> c(code) s(symbols) to open aerial
+    {
+      import = "lazyvim.plugins.extras.editor.aerial",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    }, -- <leader> c(code) s(symbols) to open aerial
 
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
-    { import = "lazyvim.plugins.extras.formatting.black" },
+    {
+      import = "lazyvim.plugins.extras.formatting.prettier",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.formatting.black",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
 
-    { import = "lazyvim.plugins.extras.lang.markdown" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.vue" },
-    { import = "lazyvim.plugins.extras.lang.toml" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.git" },
-    { import = "lazyvim.plugins.extras.lang.kotlin" },
-    { import = "lazyvim.plugins.extras.lang.sql" },
-    { import = "lazyvim.plugins.extras.lang.yaml" },
-    { import = "lazyvim.plugins.extras.lang.go" },
-    { import = "plugins" },
+    {
+      import = "lazyvim.plugins.extras.lang.markdown",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.python",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.typescript",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.vue",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.toml",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.json",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.git",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.kotlin",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.sql",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.yaml",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.go",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
+    {
+      import = "plugins",
+      cond = function()
+        return not vim.g.vscode
+      end,
+    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
