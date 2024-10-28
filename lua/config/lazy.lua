@@ -13,17 +13,15 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
+    { import = "lazyvim.plugins.extras.vscode" },
+
     -- import/override with your plugins
     { import = "lazyvim.plugins.extras.coding.mini-comment" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
@@ -32,95 +30,50 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.neogen" },
     {
       import = "lazyvim.plugins.extras.editor.aerial",
-      cond = function()
-        return not vim.g.vscode
-      end,
     }, -- <leader> c(code) s(symbols) to open aerial
 
     {
       import = "lazyvim.plugins.extras.formatting.prettier",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.formatting.black",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
 
     {
       import = "lazyvim.plugins.extras.lang.markdown",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.python",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.typescript",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.vue",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.toml",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.json",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.git",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.kotlin",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.sql",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.yaml",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "lazyvim.plugins.extras.lang.go",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
     {
       import = "plugins",
-      cond = function()
-        return not vim.g.vscode
-      end,
     },
   },
   defaults = {
