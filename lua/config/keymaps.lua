@@ -3,6 +3,8 @@
 -- Add any additional keymaps here
 if vim.g.vscode then
   -- VSCode extension
+  -- https://github.com/vscode-neovim/vscode-neovim/issues/176
+  -- vim.keymap.set("n", "K", "<cmd>call VSCodeCall('editor.action.showHover')<CR>", { silent = true })
 else
   -- ordinary Neovim
   vim.keymap.set("n", "<C-f>", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Search cheese by file name" })
