@@ -17,9 +17,65 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    {
+      "LazyVim/LazyVim",
+      import = "lazyvim.plugins",
+    },
+    { import = "lazyvim.plugins.extras.vscode" },
+
     -- import/override with your plugins
-    { import = "plugins" },
+    { import = "lazyvim.plugins.extras.coding.mini-comment" },
+    { import = "lazyvim.plugins.extras.coding.luasnip" },
+    -- { import = "lazyvim.plugins.extras.coding.codeium" },
+    -- { import = "lazyvim.plugins.extras.coding.mini-surround" },
+    { import = "lazyvim.plugins.extras.coding.neogen" },
+    {
+      import = "lazyvim.plugins.extras.editor.aerial",
+    }, -- <leader> c(code) s(symbols) to open aerial
+
+    {
+      import = "lazyvim.plugins.extras.formatting.prettier",
+    },
+    {
+      import = "lazyvim.plugins.extras.formatting.black",
+    },
+
+    {
+      import = "lazyvim.plugins.extras.lang.markdown",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.python",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.typescript",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.vue",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.toml",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.json",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.git",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.kotlin",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.sql",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.yaml",
+    },
+    {
+      import = "lazyvim.plugins.extras.lang.go",
+    },
+    {
+      import = "plugins",
+    },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -30,11 +86,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
-  checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
-  }, -- automatically check for plugin updates
+  install = { colorscheme = { "kanagawa", "gruvbox-flat", "tokyonight", "habamax" } },
+  checker = { enabled = false }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
